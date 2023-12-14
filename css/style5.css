@@ -1,0 +1,76 @@
+body{
+    height: 3000px;
+}
+
+.logo{
+    margin-left: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+}
+
+.up {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fbutton{
+    margin: 30px  60px ;
+    padding: 10px 30px;
+    border-radius: 10vh;
+    border: 2px solid rgb(4, 54, 146);
+    transition: 0.30s;
+}
+
+.fbutton:hover{
+    background-color: blue;
+    color: white;
+}
+
+main{
+    display: flex;
+    height: 400px;
+}
+
+.p1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100px;
+    margin: 100px 100px;
+}
+.p2{
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 120px 100px;
+    color: gray;
+}
+
+.sbutton{
+    margin-top: 20px;
+    margin-left: 100px;
+    padding: 10px 30px;
+    border-radius: 10vh;
+    border: 2px solid rgb(4, 54, 146);
+    transition: 0.30s;
+    width: 350px;
+}
+
+.sbutton:hover{
+    background-color: blue;
+    color: white;
+}
+
+.tbutton{
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 10px 30px;
+    border-radius: 10vh;
+    border: 2px solid rgb(4, 54, 146);
+    transition: 0.30s;
+    width: 150px;
+}
+
+.tbutton:hover{
+    background-color: blue;
+    color: white;
+}
