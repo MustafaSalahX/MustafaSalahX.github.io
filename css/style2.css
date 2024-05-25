@@ -1,0 +1,63 @@
+header{
+    color: black;
+    background-color: gray;
+    text-align: center;
+    padding: 50px 0 50px 0;
+    margin: 0 0 40px 0;
+}
+
+header a{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.home , .about{
+    padding: 89px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.home p , .about p{
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+
+.home {
+        background: red;
+    }
+
+.about {
+    background-color: blue;
+
+}
+.table{
+    width: 100%;
+}
+
+.table{
+    width: 100%;
+}
+.user-table table{
+    width: 100%;
+    background-color: green;
+    color: white;
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+.user-table table th {
+    text-transform: uppercase;
+}
+.user-form label , .user-form input{
+    width: 100%;
+    margin: 0 0 16px 0;
+}
+.user-form label {
+    display: inline-block;
+}
+.user-form button{
+    width: 100%;
+}
+
+

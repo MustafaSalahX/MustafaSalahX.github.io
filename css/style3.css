@@ -1,0 +1,50 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    
+    margin-right: 50px;
+}
+.logo {
+    padding: 0 100px;
+}
+
+header .logo{
+    float: left;
+}
+header nav {
+    float: right;
+}
+header nav ul li{
+    display: inline-block;
+}
+ header nav a{
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+}
+header nav a.buy-now{
+    background-color: blue;
+    color: white;
+    border-radius: 7px;
+    margin-left: 35px;
+    margin-right: 50px;
+    padding: 10px 20px;
+    
+}
+header nav a.buy-now:hover{
+    background-color: #009;
+
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    display: none;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
