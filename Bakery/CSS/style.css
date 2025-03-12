@@ -1,0 +1,396 @@
+/* =========== Whole Page Styling =========== */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+p,
+button,
+li,
+td {
+  font-family: "Alegreya Sans";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Alegreya";
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner-container {
+  width: 80%;
+  margin: auto;
+}
+
+/* =========== Navbar Section =========== */
+
+.navbar a {
+  color: gray;
+}
+
+.navbar {
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  position: fixed;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.home-li {
+  border-top: 3px solid #947f5e;
+}
+
+.home-li a {
+  color: black;
+}
+
+.navbar img {
+  width: 180px;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0px 15px;
+  font-size: 19px;
+}
+
+.navbar {
+  height: 70px;
+  line-height: 70px;
+}
+.navbar img,
+.navbar ul {
+  vertical-align: middle;
+}
+
+/* =========== Welcome Section =========== */
+
+.welcome {
+  height: 100vh;
+  vertical-align: middle;
+  overflow: auto;
+  color: white;
+  background: url(../images/drew-coffman-1872.jpg) no-repeat fixed;
+  /* background-size: cover; */
+}
+
+.welcome .inner-container {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.welcome p {
+  line-height: 40px;
+  margin: auto;
+  font-size: 22px;
+  padding: 15px 0px;
+  max-width: 650px;
+}
+
+.welcome h1 {
+  font-size: 76px;
+}
+
+.contact-us,
+.learn-more {
+  font-family: "Alegreya Sans";
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: center;
+  margin-top: 20px;
+  border: 0px;
+  width: 120px;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 5px;
+}
+
+.learn-more {
+  background-color: #947f5e;
+}
+
+.contact-us {
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.scroll-btn {
+  display: block;
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+  margin: auto;
+  margin-top: 50px;
+  width: 35px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+/* =========== About Us & Location Sections =========== */
+
+.about-us,
+.products,
+.location,
+.contact-info {
+  height: 700px;
+  color: rgb(104, 104, 104);
+}
+
+.about-us .right,
+.location .left,
+.contact-info .right,
+.contact-info .left {
+  width: 45%;
+  margin-top: 120px;
+}
+
+.about-us h3,
+.location h3,
+.products h3,
+.contact-info h3 {
+  color: black;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+.about-us p,
+.location p,
+.contact-info p {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.about-us div > img,
+.location div > img {
+  width: 650px;
+  padding: 45px;
+}
+
+.about-us td {
+  font-size: 23px;
+  vertical-align: middle;
+}
+
+.about-us .right img {
+  width: 45px;
+  border: 1px solid rgba(0, 0, 0, 0.305);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.location,
+.contact-info {
+  background-color: rgb(248, 248, 248);
+}
+
+.location .left {
+  padding: 45px;
+}
+
+.location .inner-container {
+  padding-top: 60px;
+}
+
+/* =========== Products Section =========== */
+
+.products {
+  text-align: center;
+}
+
+.products h4 {
+  font-size: 23px;
+  color: black;
+  margin-top: 15px;
+}
+
+.products .bottom {
+  margin: auto;
+  margin-top: 15px;
+}
+
+.products .inner-container {
+  padding-top: 50px;
+}
+
+.products h3 {
+  margin: 0;
+}
+
+.products p {
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.card {
+  width: 30%;
+  display: inline-block;
+  max-width: 500px;
+}
+
+.card img,
+.products p {
+  width: 90%;
+}
+
+/* =========== Contact Info Section =========== */
+
+.contact-info li a {
+  font-size: 21px;
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+
+.contact-info li {
+  list-style-type: none;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+
+.contact-info li img {
+  vertical-align: middle;
+  width: 50px;
+  background-color: #947f5e;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact-info .left {
+  margin-left: 40px;
+}
+
+.contact-info .left,
+.contact-info .right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact-info iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.contact-info .right,
+iframe {
+  position: relative;
+}
+
+.overlay,
+.overlay img {
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.overlay {
+  width: 100%;
+}
+
+.overlay img {
+  background-color: transparent;
+  margin-left: 70px;
+}
+
+/* =========== Details Section =========== */
+.details {
+  background-color: rgb(64, 61, 56);
+  height: 400px;
+  font-size: 22px;
+}
+
+.details .inner-container {
+  padding-top: 75px;
+}
+
+.details .detail-about-us,
+.details .special,
+.details .open-hours,
+.details .contact {
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0px 20px;
+  width: 22%;
+  color: rgb(134, 134, 134);
+}
+
+.details .contact img {
+  width: 40px;
+}
+
+.details .contact img,
+.details .contact p {
+  display: inline;
+  vertical-align: middle;
+}
+
+.details .contact a {
+  color: rgb(134, 134, 134);
+}
+
+.details ul {
+  list-style: none;
+}
+
+.details li {
+  margin: 10px 0px;
+}
+
+.details h5 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.details .background-image {
+  background: url("../images/contact-details-map.png") no-repeat center;
+}
+
+/* =========== Footer Section =========== */
+
+.footer {
+  color: rgb(134, 134, 134);
+  height: 300px;
+  background-color: rgb(53, 51, 48);
+  padding-top: 65px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 22px;
+  margin: 20px;
+}
+
+.footer .logo {
+  width: 370px;
+}
+
+.footer .icon {
+  background-color: rgb(72, 69, 64);
+  border-radius: 50%;
+  width: 60px;
+  margin: 5px;
+}
