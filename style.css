@@ -1,0 +1,493 @@
+/* ========== VARIABLES & BASE ========== */
+:root {
+    --bg-color: #eaddd3; /* Warm beige */
+    --card-bg: #f8f6f0;  /* Creamy white */
+    --accent-gold: #c49a62;
+    --text-dark: #3a3229;
+    --text-muted: #7f6e52;
+    --door-color: #d1bfae;
+    
+    --font-heading: 'Tajawal', sans-serif;
+    --font-body: 'Cairo', sans-serif;
+    --font-calligraphy: 'Amiri', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ========== 1. DOOR OVERLAY (WELCOME) ========== */
+.door-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    overflow: hidden;
+    background: transparent;
+    transition: opacity 1s ease 1s; /* fade out after doors open */
+}
+
+.door-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Base styling for doors */
+.door {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-color: var(--door-color);
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
+    transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 2;
+    background-image: linear-gradient(to bottom, #d6c6b8, #c1ab97);
+}
+
+.door-left {
+    left: 0;
+    border-right: 2px solid rgba(0,0,0,0.1);
+}
+
+.door-right {
+    right: 0;
+    border-left: 2px solid rgba(255,255,255,0.2);
+}
+
+/* Subtle door panel outlines to look like cabinets */
+.door-panel {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    width: 80%;
+    border: 2px solid rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+.door-left .door-panel {
+    right: 10%;
+}
+.door-right .door-panel {
+    left: 10%;
+}
+
+/* Open states */
+.door-left.open {
+    transform: translateX(-100%);
+}
+
+.door-right.open {
+    transform: translateX(100%);
+}
+
+/* Center Welcome Card container */
+.welcome-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    height: 85vh; /* Make it take up most of the screen height */
+    max-height: 900px;
+    transition: opacity 0.5s ease;
+}
+
+.welcome-center.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.door-frame-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border: 4px solid var(--accent-gold);
+}
+
+.door-frame-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.door-frame-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.35); /* Darken slightly to compensate for bigger image */
+    border-radius: 20px;
+}
+
+.door-frame-content .welcome-card {
+    width: 100%;
+    max-width: 450px; /* Keep the inner card from getting too wide */
+    padding: 35px 25px;
+    margin-top: 20px;
+}
+
+.welcome-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(110, 85, 65, 0.3);
+    border: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.welcome-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem; /* Slightly larger title */
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.welcome-subtitle {
+    font-family: var(--font-calligraphy);
+    font-size: 1.6rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.welcome-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+    margin: 20px 0;
+}
+
+.welcome-hint {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
+
+/* ========== 2. MAIN CONTENT & FOLDERS ========== */
+.main-content {
+    opacity: 0; /* Hidden initially, shown via JS after door opens */
+    transition: opacity 1s ease;
+    padding-bottom: 50px;
+}
+
+.main-content.visible {
+    opacity: 1;
+}
+
+.app-header {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.romantic-tagline {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.folders-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* The Folder Section (matches screenshots) */
+.folder-section {
+    position: relative;
+    margin-top: 15px; /* space for tab */
+}
+
+.folder-tab {
+    position: absolute;
+    top: -30px;
+    left: 20px; /* Arabic RTL makes left side visually left */
+    background-color: var(--door-color);
+    padding: 5px 15px;
+    border-radius: 10px 10px 0 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    z-index: 1;
+}
+
+.folder-content {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 2;
+}
+
+/* Section 1: Hero Image */
+.hero-image-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.hero-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+.caption h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    margin-bottom: 5px;
+}
+.caption p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Section 2: 2x2 Image Grid */
+.photo-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.grid-item {
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 1; /* Make it square */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Section 3: Memory List */
+.memory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.memory-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.memory-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.memory-card:hover img {
+    transform: scale(1.03);
+}
+.memory-hint {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+}
+
+/* Section 4: Secret Area */
+.secret-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+.romantic-title {
+    font-family: var(--font-calligraphy);
+    font-size: 1.6rem;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+.romantic-paragraph {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+/* ========== BUTTONS ========== */
+.btn-royal {
+    background: linear-gradient(135deg, var(--accent-gold), #e8c99b);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(196, 154, 98, 0.4);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-royal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(196, 154, 98, 0.6);
+}
+.btn-small {
+    padding: 8px 20px;
+    font-size: 1rem;
+}
+
+/* ========== MODALS ========== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.small-modal {
+    max-width: 350px;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px; /* left for RTL */
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.elegant-title {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.gold-text {
+    color: var(--accent-gold);
+    font-family: var(--font-calligraphy);
+    font-size: 2rem;
+}
+
+.elegant-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Image inside memory modal */
+#modal-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Password Group */
+.password-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+.password-input-group input {
+    padding: 12px;
+    border: 2px solid #e0d5cb;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    text-align: center;
+    background: white;
+}
+.password-input-group input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.error-msg {
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    height: 20px;
+}
+
+/* Final Surprise Animation */
+.heart-icon {
+    font-size: 3rem;
+    color: #e25555;
+    margin-top: 20px;
+}

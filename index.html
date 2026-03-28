@@ -1,1274 +1,294 @@
 <!DOCTYPE html>
-<!--==== This Website Was Made By MustafaSalah Execlusive To Route Academy BootStrap Exam ! ======= -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Bootstrap, Exam, Route, Front-End, Daniels"
-    />
-    <meta name="author" content="MustafaSalah" />
-    <meta
-      name="description"
-      content="Route Front-End Daniels Exam on Bootstrap"
-    />
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ديوان الأيام - مفاجأة</title>
+    <!-- Google Fonts for Premium Arabic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Daniels</title>
-  </head>
-  <body data-bs-spy="scroll" data-bs-target="#MustafaSalah">
-    <!-- ============== NAVBAR ============== -->
-    <nav class="navbar fixed-top bg-white navbar-expand-lg" id="MustafaSalah">
-      <div class="container">
-        <a
-          class="navbar-brand montserrat p-2 fs-5 text-uppercase fw-bolder"
-          href="#"
-          >Daniels</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul
-            class="navbar-nav ms-auto mb-2 mb-lg-0 align-content-center justify-content-center"
-          >
-            <li class="nav-item fw-medium small position-relative">
-              <a
-                class="nav-link montserrat text-capitalize pb-0 px-3"
-                href="#home"
-                >home</a
-              >
-            </li>
-            <li class="nav-item fw-medium small position-relative">
-              <a
-                class="nav-link montserrat text-capitalize pb-0 px-3"
-                href="#about"
-                >about</a
-              >
-            </li>
-            <li class="nav-item fw-medium small position-relative">
-              <a
-                class="nav-link montserrat text-capitalize pb-0 px-3"
-                href="#services"
-                >services</a
-              >
-            </li>
-            <li class="nav-item fw-medium small position-relative">
-              <a
-                class="nav-link montserrat text-capitalize pb-0 px-3"
-                href="#portfolio"
-                >works</a
-              >
-            </li>
-            <li class="nav-item fw-medium small position-relative">
-              <a
-                class="nav-link montserrat text-capitalize pb-0 px-3"
-                href="#testimonials"
-                >clients</a
-              >
-            </li>
-            <li class="nav-item fw-medium small position-relative">
-              <a
-                class="nav-link montserrat text-capitalize pb-0 px-3"
-                href="#team"
-                >Team</a
-              >
-            </li>
-            <li class="nav-item fw-medium small position-relative">
-              <a
-                class="nav-link montserrat text-capitalize pb-0 px-3"
-                href="#contact"
-                >contact</a
-              >
-            </li>
-          </ul>
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. The Welcome Door (Overlay) -->
+    <div id="door-overlay" class="door-overlay">
+        <div class="door door-left" id="door-left">
+            <div class="door-panel"></div>
         </div>
-      </div>
-    </nav>
-
-    <!-- ============== HEADER ============== -->
-    <header id="home">
-      <div
-        class="montserrat bg-black bg-opacity-75 container-fluid vh-100 text-white d-flex justify-content-center align-items-center flex-column"
-      >
-        <h1>Hello</h1>
-        <p class="fs-2 text-capitalize">
-          I Am <span id="animation-text" class="animation-text"></span>
-        </p>
-        <div class="icons mt-3">
-          <a
-            class="text-decoration-none text-white"
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i
-              class="icon fa-brands fa-facebook-f bg-black rounded-pill text-center p-2"
-              aria-hidden="true"
-            ></i>
-          </a>
-          <a
-            class="text-decoration-none text-white"
-            href="https://www.twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i
-              class="icon fa-brands fa-twitter bg-black rounded-pill text-center p-2"
-              aria-hidden="true"
-            ></i>
-          </a>
-          <a
-            class="text-decoration-none text-white"
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i
-              class="icon fa-brands fa-linkedin-in bg-black rounded-pill text-center p-2"
-              aria-hidden="true"
-            ></i
-          ></a>
-          <a
-            class="text-decoration-none text-white"
-            href="https://www.behance.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i
-              class="icon fa-brands fa-behance bg-black rounded-pill text-center p-2"
-              aria-hidden="true"
-            ></i
-          ></a>
-          <a
-            class="text-decoration-none text-white"
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i
-              class="icon fa-brands fa-youtube bg-black rounded-pill text-center p-2"
-              aria-hidden="true"
-            ></i
-          ></a>
+        <div class="door door-right" id="door-right">
+            <div class="door-panel"></div>
         </div>
-      </div>
-    </header>
 
-    <!-- ============== ABOUT ============== -->
-    <section id="about" class="about overflow-auto">
-      <div class="my-5 container p-md-5 bg-white about-card">
-        <div class="row">
-          <div class="skills d-flex flex-column p-3 col-lg-5">
-            <div class="upper-left d-flex align-items-center">
-              <div class="p-2 position-relative">
-                <img
-                  class="d-block w-100 rounded-2 position-relative z-1"
-                  src="./images/hero.jpg"
-                  alt="portrait image"
-                />
-                <div class="dotted-bg position-absolute"></div>
-              </div>
-            </div>
-          </div>
-          <div class="content p-3 col-lg-7">
-            <h3 class="about-header fs-2 montserrat bold-headers">About Me.</h3>
-            <h4
-              class="text-uppercase small text-body-secondary fw-light poppins letter-spacing mb-4"
-            >
-              ui / ux designer & web developer
-            </h4>
-            <p class="fw-light text-secondary poppins mb-4">
-              I am <span class="fw-bold">Jerry Daniels</span> Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever It has
-              survived not only five centuries, but also the leap into
-              electronic but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing
-            </p>
-            <div class="skills my-2">
-              <div class="progress mb-4 mt-1 bg-body-tertiary inset-shadow">
-                <div
-                  class="progress-bar rounded-2 px-2 bg-black text-start"
-                  role="progressbar"
-                  style="width: 95%"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div
-                    class="d-flex justify-content-between montserrat fw-medium"
-                  >
-                    <p>Web Design</p>
-                    <p>95%</p>
-                  </div>
-                </div>
-              </div>
+        <div class="welcome-center" id="welcome-center">
+            <div class="door-frame-wrapper">
+                <img src="img/door.jpg" class="door-frame-img" alt="Door Front">
+                <div class="door-frame-content">
+                    <p class="welcome-quote"
+                        style="font-family: 'Aref Ruqaa', serif; font-size: 1.5rem; color: #ff3b3b; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.4); margin-bottom: 20px; line-height: 1.6; text-align: center;">
+                        "بك ابتديت عمري يا اجمل من عمري<br>دمت لي شي جميل لا ينتهي"</p>
+                    <!-- "بِكَ ابْتَدَيْتُ عُمْرِي يَا أَجْمَلَ مِنْ عُمْرِي<br>دُمْتَ لِي شَيْئاً جَمِيلاً لَا يَنْتَهِي"</p> -->
+                    <div class="welcome-card"
+                        style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                        <h1 class="welcome-title" style="color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            Mohammed & Menna</h1>
+                        <h2 class="welcome-subtitle" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">ديوان الأيام</h2>
+                        <div class="welcome-divider"></div>
 
-              <div class="progress mb-4 mt-1 bg-body-tertiary inset-shadow">
-                <div
-                  class="progress-bar rounded-2 px-2 bg-black text-start"
-                  role="progressbar"
-                  style="width: 80%"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div
-                    class="d-flex justify-content-between montserrat fw-medium"
-                  >
-                    <p>Branding</p>
-                    <p>80%</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="progress mb-5 mt-1 bg-body-tertiary inset-shadow">
-                <div
-                  class="progress-bar rounded-2 px-2 bg-black text-start"
-                  role="progressbar"
-                  style="width: 90%"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div
-                    class="d-flex justify-content-between montserrat fw-medium"
-                  >
-                    <p>Development</p>
-                    <p>90%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-    <!-- Button trigger modal -->
-<button type="button" class=" cv-btn mt-2 btn bg-black text-white border-1 border-black py-2 me-1 poppins t-duration" data-bs-toggle="modal" data-bs-target="#exampleModal">
-Download C.V
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">ALERT!!!</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        You Are About To Download -> C.V
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit</button>
-        <button type="button" class="btn btn-primary">Download!</button>
-      </div>
-    </div>
-  </div>
-</div>
-            <a href="#contact">
-              <button
-                class="contact-btn mt-2 btn bg-white border border-1 border-black py-2 poppins t-duration"
-              >
-                Contact Me
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== SERVICES ============== -->
-    <section id="services" class="services bg-body-tertiary overflow-auto">
-      <div class="container text-center my-5">
-        <h2 class="fs-1 montserrat very-bold-headers text-capitalize mb-5">
-          services.
-          <div class="dotted-bg position-absolute"></div>
-        </h2>
-        <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 pb-5">
-          <div class="col">
-            <div class="card h-100 border-0 shadow border-0 px-3 py-4">
-              <div class="card-body">
-                <i
-                  class="fa fa-laptop fs-3 rounded-pill border-primary d-block m-auto t-duration bg-body-tertiary"
-                  aria-hidden="true"
-                ></i>
-                <h5
-                  class="card-title text-uppercase my-3 fs-5 text-capitalize bold-headers"
-                >
-                  web design
-                </h5>
-                <p class="card-text text-body-tertiary mb-4 small poppins">
-                  Lorem Ipsum is simply dummy text of the Lorem Ipsum has been
-                  the industry's standard dummy text ever
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow border-0 px-3 py-4">
-              <div class="card-body">
-                <i
-                  class="fa-solid fa-bullhorn fs-3 rounded-pill border-primary d-block m-auto t-duration bg-body-tertiary"
-                ></i>
-                <h5
-                  class="card-title text-uppercase my-3 fs-5 text-capitalize bold-headers"
-                >
-                  branding
-                </h5>
-                <p class="card-text text-body-tertiary mb-4 small poppins">
-                  Lorem Ipsum is simply dummy text of the Lorem Ipsum has been
-                  the industry's standard dummy text ever
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow border-0 px-3 py-4">
-              <div class="card-body">
-                <i
-                  class="fa fa-umbrella fs-3 rounded-pill border-primary d-block m-auto t-duration bg-body-tertiary"
-                  aria-hidden="true"
-                ></i>
-                <h5
-                  class="card-title text-uppercase my-3 fs-5 text-capitalize bold-headers"
-                >
-                  development
-                </h5>
-                <p class="card-text text-body-tertiary mb-4 small poppins">
-                  Lorem Ipsum is simply dummy text of the Lorem Ipsum has been
-                  the industry's standard dummy text ever
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow border-0 px-3 py-4">
-              <div class="card-body">
-                <i
-                  class="fas fa-gem fs-3 rounded-pill border-primary d-block m-auto t-duration bg-body-tertiary"
-                ></i>
-                <h5
-                  class="card-title text-uppercase my-3 fs-5 text-capitalize bold-headers"
-                >
-                  creative design
-                </h5>
-                <p class="card-text text-body-tertiary mb-4 small poppins">
-                  Lorem Ipsum is simply dummy text of the Lorem Ipsum has been
-                  the industry's standard dummy text ever
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow border-0 px-3 py-4">
-              <div class="card-body">
-                <i
-                  class="fas fa-tv fs-3 rounded-pill border-primary d-block m-auto t-duration bg-body-tertiary"
-                ></i>
-                <h5
-                  class="card-title text-uppercase my-3 fs-5 text-capitalize bold-headers"
-                >
-                  Fully Responsive
-                </h5>
-                <p class="card-text text-body-tertiary mb-4 small poppins">
-                  Lorem Ipsum is simply dummy text of the Lorem Ipsum has been
-                  the industry's standard dummy text ever
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow border-0 px-3 py-4">
-              <div class="card-body">
-                <i
-                  class="fa fa-camera fs-3 rounded-pill border-primary d-block m-auto t-duration bg-body-tertiary"
-                  aria-hidden="true"
-                ></i>
-                <h5
-                  class="card-title text-uppercase my-3 fs-5 text-capitalize bold-headers"
-                >
-                  Retina Ready
-                </h5>
-                <p class="card-text text-body-tertiary mb-4 small poppins">
-                  Lorem Ipsum is simply dummy text of the Lorem Ipsum has been
-                  the industry's standard dummy text ever
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== PORTFOLIO ============== -->
-    <section id="portfolio" class="portfolio overflow-auto">
-      <div class="container my-5 pb-5">
-        <h2
-          class="fs-1 text-center montserrat very-bold-headers text-capitalize mb-5"
-        >
-          portfolio.
-          <div class="dotted-bg position-absolute"></div>
-        </h2>
-        <ul
-          class="nav poppins justify-content-center txt mb-3 bg-transparent"
-          id="pills-tab"
-          role="tablist"
-        >
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="pills-home-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-All"
-              type="button"
-              role="tab"
-              aria-controls="pills-home"
-              aria-selected="true"
-            >
-              All
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="pills-profile-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-Brand"
-              type="button"
-              role="tab"
-              aria-controls="pills-profile"
-              aria-selected="false"
-            >
-              Brand
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="pills-contact-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-Design"
-              type="button"
-              role="tab"
-              aria-controls="pills-contact"
-              aria-selected="false"
-            >
-              Design
-            </button>
-          </li> 
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="pills-settings-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-graphic"
-              type="button"
-              role="tab"
-              aria-controls="pills-settings"
-              aria-selected="false"
-            >
-              Graphic
-            </button>
-          </li> 
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div
-            class="tab-pane fade show active"
-            id="pills-All"
-            role="tabpanel"
-            aria-labelledby="pills-home-tab"
-            tabindex="0"
-          >
-          <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
-            <div class="col">
-              <div
-                class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-              >
-                <div class="img-div overflow-hidden">
-                  <img
-                    src="./images/portfolio/1.jpg"
-                    class="card-img-top rounded-0"
-                    alt=""
-                  />
-                  <div
-                    class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <p
-                      class="montserrat fw-bold letter-spacing text-uppercase small"
-                    >
-                      web design
-                    </p>
-                    <br />
-                    <div>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                      ></i>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                      ></i>
+                        <button id="btn-open-door" class="btn-royal">
+                            <i class="fa-solid fa-lock" style="margin-left: 8px;"></i> فتح الذكريات
+                        </button>
+                        <p class="welcome-hint"
+                            style="color: #ffffff; font-weight: bold; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">اضغط لفتح
+                            الدولاب والدخول إلى الذكريات</p>
+                        <p class="romantic-text"
+                            style="display: none; margin-top: 15px; font-size: 0.9rem; color: #ffffff;">هنا
+                            نحفظ الذكريات... لتبقى للأبد</p>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="col">
-              <div
-                class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-              >
-                <div class="img-div overflow-hidden">
-                  <img
-                    src="./images/portfolio/2.jpg"
-                    class="card-img-top rounded-0"
-                    alt=""
-                  />
-                  <div
-                    class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <p
-                      class="montserrat fw-bold letter-spacing text-uppercase small"
-                    >
-                      web design
-                    </p>
-                    <br />
-                    <div>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                      ></i>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div
-                class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-              >
-                <div class="img-div overflow-hidden">
-                  <img
-                    src="./images/portfolio/3.jpg"
-                    class="card-img-top rounded-0"
-                    alt=""
-                  />
-                  <div
-                    class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <p
-                      class="montserrat fw-bold letter-spacing text-uppercase small"
-                    >
-                      web design
-                    </p>
-                    <br />
-                    <div>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                      ></i>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div
-                class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-              >
-                <div class="img-div overflow-hidden">
-                  <img
-                    src="./images/portfolio/4.jpg"
-                    class="card-img-top rounded-0"
-                    alt=""
-                  />
-                  <div
-                    class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <p
-                      class="montserrat fw-bold letter-spacing text-uppercase small"
-                    >
-                      web design
-                    </p>
-                    <br />
-                    <div>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                      ></i>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div
-                class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-              >
-                <div class="img-div overflow-hidden">
-                  <img
-                    src="./images/portfolio/5.jpg"
-                    class="card-img-top rounded-0"
-                    alt=""
-                  />
-                  <div
-                    class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <p
-                      class="montserrat fw-bold letter-spacing text-uppercase small"
-                    >
-                      web design
-                    </p>
-                    <br />
-                    <div>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                      ></i>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div
-                class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-              >
-                <div class="img-div overflow-hidden">
-                  <img
-                    src="./images/portfolio/6.jpg"
-                    class="card-img-top rounded-0"
-                    alt=""
-                  />
-                  <div
-                    class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <p
-                      class="montserrat fw-bold letter-spacing text-uppercase small"
-                    >
-                      web design
-                    </p>
-                    <br />
-                    <div>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                      ></i>
-                      <i
-                        class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div
-            class="tab-pane fade row row-cols-2 row-cols-lg-3 row-cols-md-2 g-4 d-lg-flex"
-            id="pills-Brand"
-            role="tabpanel"
-            aria-labelledby="pills-profile-tab"
-            tabindex="0"
-          >
-          <div class="col">
-            <div
-              class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-            >
-              <div class="img-div overflow-hidden">
-                <img
-                  src="./images/portfolio/4.jpg"
-                  class="card-img-top rounded-0"
-                  alt=""
-                />
-                <div
-                  class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p
-                    class="montserrat fw-bold letter-spacing text-uppercase small"
-                  >
-                    web design
-                  </p>
-                  <br />
-                  <div>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                    ></i>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div
-              class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-            >
-              <div class="img-div overflow-hidden">
-                <img
-                  src="./images/portfolio/6.jpg"
-                  class="card-img-top rounded-0"
-                  alt=""
-                />
-                <div
-                  class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p
-                    class="montserrat fw-bold letter-spacing text-uppercase small"
-                  >
-                    web design
-                  </p>
-                  <br />
-                  <div>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                    ></i>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div
-            class="tab-pane fade col-md-4 col-sm-6 d-flex gap-3 col-lg-7 row-cols-lg-2"
-            id="pills-Design"
-            role="tabpanel"
-            aria-labelledby="pills-contact-tab"
-            tabindex="0"
-          >
-          <div class="col">
-            <div
-              class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-            >
-              <div class="img-div overflow-hidden">
-                <img
-                  src="./images/portfolio/2.jpg"
-                  class="card-img-top rounded-0"
-                  alt=""
-                />
-                <div
-                  class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p
-                    class="montserrat fw-bold letter-spacing text-uppercase small"
-                  >
-                    web design
-                  </p>
-                  <br />
-                  <div>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                    ></i>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div
-              class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-            >
-              <div class="img-div overflow-hidden">
-                <img
-                  src="./images/portfolio/5.jpg"
-                  class="card-img-top rounded-0"
-                  alt=""
-                />
-                <div
-                  class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p
-                    class="montserrat fw-bold letter-spacing text-uppercase small"
-                  >
-                    web design
-                  </p>
-                  <br />
-                  <div>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-                    ></i>
-                    <i
-                      class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div
-      class="tab-pane fade row row-cols-2 row-cols-lg-3 row-cols-md-2 g-4 d-lg-flex"
-      id="pills-graphic"
-      role="tabpanel"
-      aria-labelledby="pills-settings-tab"
-      tabindex="0"
-    >
-    <div class="col">
-      <div
-        class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-      >
-        <div class="img-div overflow-hidden">
-          <img
-            src="./images/portfolio/1.jpg"
-            class="card-img-top rounded-0"
-            alt=""
-          />
-          <div
-            class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-          >
-            <p
-              class="montserrat fw-bold letter-spacing text-uppercase small"
-            >
-              web design
-            </p>
-            <br />
-            <div>
-              <i
-                class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-              ></i>
-              <i
-                class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-              ></i>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="col">
-
-      <div
-        class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-      >
-        <div class="img-div overflow-hidden">
-          <img
-            src="./images/portfolio/3.jpg"
-            class="card-img-top rounded-0"
-            alt=""
-          />
-          <div
-            class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-          >
-            <p
-              class="montserrat fw-bold letter-spacing text-uppercase small"
-            >
-              web design
-            </p>
-            <br />
-            <div>
-              <i
-                class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-              ></i>
-              <i
-                class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-              ></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div
-        class="card overflow-hidden position-relative border-0 rounded-0 h-100"
-      >
-        <div class="img-div overflow-hidden">
-          <img
-            src="./images/portfolio/5.jpg"
-            class="card-img-top rounded-0"
-            alt=""
-          />
-          <div
-            class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-          >
-            <p
-              class="montserrat fw-bold letter-spacing text-uppercase small"
-            >
-              web design
-            </p>
-            <br />
-            <div>
-              <i
-                class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-link"
-              ></i>
-              <i
-                class="t-duration border border-1 border-black text-center rounded-pill fa-solid fa-magnifying-glass-plus"
-              ></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     </div>
 
+    <!-- 2. Main Gallery Content -->
+    <div id="main-content" class="main-content">
 
-   
-      </div>
-    </section>
+        <header class="app-header">
+            <p class="romantic-tagline">هنا نحفظ الذكريات... لتبقى للأبد</p>
+        </header>
 
-    <!-- ============== TESTIMONIALS ============== -->
-    <section
-      class="img-slider position-relative bg-body-secondary bg-opacity-75 overflow-auto py-5"
-      id="testimonials"
-    >
-      <h2
-        class="fs-1 text-center montserrat very-bold-headers text-capitalize mb-5"
-      >
-        Testimonials.
-        <div class="dotted-bg position-absolute"></div>
-      </h2>
-      <div
-        id="CarsoleEE"
-        class="container position-static carousel slide my-5"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#CarsoleEE"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#CarsoleEE"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#CarsoleEE"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img
-              src="/images/1_New1.jpg"
-              class="d-block m-auto rounded-pill"
-              alt=""
-            />
-            <p class="text-center fw-light poppins text-secondary mt-3">
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the when an unknown printer took a galley of type <br />and
-              scrambled it to make a type specimen book.
-            </p>
-            <h3 class="text-center text-capitalize fs-6 montserrat mt-4">
-              Alex Smith
-            </h3>
-            <h4
-              class="text-center text-capitalize text-secondary fw-bold poppins small"
-            >
-              Evanto customer
-            </h4>
-          </div>
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img
-              src="/images/1_New1.jpg"
-              class="d-block m-auto rounded-pill"
-              alt=""
-            />
-            <p class="text-center fw-light poppins text-secondary mt-3">
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the when an unknown printer took a galley of type <br />and
-              scrambled it to make a type specimen book.
-            </p>
-            <h3 class="text-center text-capitalize fs-6 montserrat mt-4">
-              Alex Smith
-            </h3>
-            <h4
-              class="text-center text-capitalize text-secondary fw-bold poppins small"
-            >
-              Evanto customer
-            </h4>
-          </div>
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img
-              src="/images/1_New1.jpg"
-              class="d-block m-auto rounded-pill"
-              alt=""
-            />
-            <p class="text-center fw-light poppins text-secondary mt-3">
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the when an unknown printer took a galley of type <br />and
-              scrambled it to make a type specimen book.
-            </p>
-            <h3 class="text-center text-capitalize fs-6 montserrat mt-4">
-              Alex Smith
-            </h3>
-            <h4
-              class="text-center text-capitalize text-secondary fw-bold poppins small"
-            >
-              Evanto customer
-            </h4>
-          </div>
-        </div>
-      </div>
-    </section>
+        <main class="folders-container">
 
-    <!-- ============== STATS ============== -->
-    <section id="stats" class="stats overflow-auto">
-      <div
-        class="container justify-content-center align-items-center text-center my-5"
-      >
-        <div class="row">
-          <div class="col-md-3 col-sm-6 p-5">
-            <i class="fa-solid fa-user-group fs-3"></i>
-            <h3 class="my-3 montserrat very-bold-headers">850</h3>
-            <h5 class="text-secondary fs-6">Happy Customers</h5>
-          </div>
-          <div class="col-md-3 col-sm-6 p-5 fs-2">
-            <i class="fa-solid fa-thumbs-up fs-3"></i>
-            <h3 class="my-3 montserrat very-bold-headers">230</h3>
-            <h5 class="text-secondary fs-6">Complete Projects</h5>
-          </div>
-          <div class="col-md-3 col-sm-6 p-5 fs-2">
-            <i class="fa-solid fa-bullhorn fs-3"></i>
-            <h3 class="my-3 montserrat very-bold-headers">9450</h3>
-            <h5 class="text-secondary fs-6">Lines Of Code</h5>
-          </div>
-          <div class="col-md-3 col-sm-6 p-5 fs-2">
-            <i class="fa-solid fa-cloud-arrow-down fs-3"></i>
-            <h3 class="my-3 montserrat very-bold-headers">780</h3>
-            <h5 class="text-secondary fs-6">Files Downloaded</h5>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== TEAM ============== -->
-    <section id="team" class="team bg-body-tertiary overflow-auto">
-      <div class="container my-5 py-5">
-        <h2
-          class="fs-1 text-center montserrat very-bold-headers text-capitalize mb-5"
-        >
-          Our Team.
-          <div class="dotted-bg position-absolute"></div>
-        </h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          <div class="col">
-            <div class="card shadow border-0 rounded-0 h-100">
-              <div class="img-div overflow-hidden position-relative">
-                <img
-                  src="/images/1.jpg"
-                  class="card-img-top rounded-0 t-duration"
-                  alt="A man with glasses"
-                />
-                <div
-                  class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                >
-                  <div>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-facebook-f"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-twitter"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-instagram"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-linkedin-in"
-                    ></i>
-                  </div>
+            <!-- Section 1: What they love -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>البداية</span>
+                    <i class="fa-solid fa-heart" style="margin-right: 5px; color: #c49a62;"></i>
                 </div>
-              </div>
-              <div class="card-body rounded-bottom-2 text-center text-white">
-                <p class="montserrat card-text fs-3 fw-medium">John Doe</p>
-                <p class="montserrat card-text fs-5 fw-bold">
-                  FRONT-END DEVELOPER
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow border-0 rounded-0 h-100">
-              <div class="img-div overflow-hidden position-relative">
-                <img
-                  src="/images/2.jpg"
-                  class="card-img-top rounded-0 t-duration"
-                  alt="A man with red t-shirt"
-                />
-                <div
-                  class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                >
-                  <div>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-facebook-f"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-twitter"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-instagram"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-linkedin-in"
-                    ></i>
-                  </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/1.jpg"
+                                alt="صورة 1">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/2.jpg"
+                                alt="صورة 2">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/3.jpg"
+                                alt="صورة 3">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/4.jpg"
+                                alt="صورة 4">
+                        </div>
+                    </div>
+                    <div class="caption" style="margin-top: 15px;">
+                        <h3>الأشياء البسيطة التي تجمعنا</h3>
+                        <p>في كل تفصيلة صغيرة، أرى انعكاساً لجمال روحك.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="card-body rounded-bottom-2 text-center text-white">
-                <p class="montserrat card-text fs-3 fw-medium">Dave Wood</p>
-                <p class="montserrat card-text fs-5 fw-bold">
-                  BACK-END DEVELOPER
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow border-0 rounded-0 h-100">
-              <div class="img-div overflow-hidden position-relative">
-                <img
-                  src="/images/1.jpg"
-                  class="card-img-top rounded-0 t-duration"
-                  alt="A man with glasses"
-                />
-                <div
-                  class="overlay t-duration position-absolute bg-white d-flex flex-column justify-content-center align-items-center"
-                >
-                  <div>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-facebook-f"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-twitter"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-instagram"
-                    ></i>
-                    <i
-                      class="t-duration fs-5 border border-1 border-black text-center rounded-pill fa-brands fa-linkedin-in"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body rounded-bottom-2 text-center text-white">
-                <p class="montserrat card-text fs-3 fw-medium">Claire Chedd</p>
-                <p class="montserrat card-text fs-5 fw-bold">
-                  BACK-END DEVELOPER
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </section>
 
-    <!-- ============== CONTACT ============== -->
-    <section id="contact" class="contact overflow-auto">
-      <div class="container my-5 py-5">
-        <h2
-          class="fs-1 text-center montserrat very-bold-headers text-capitalize mb-5"
-        >
-          Contact Us.
-          <div class="dotted-bg position-absolute"></div>
-        </h2>
-        <div class="row">
-          <div class="text-center mb-4 col-lg-4 col-md-6">
-            <i
-              class="fa-solid fa-location-arrow rounded-pill t-duration fs-4"
-            ></i>
-            <h4 class="fs-6 montserrat fw-bold mt-2">Address</h4>
-            <p class="text-secondary poppins">
-              6834 Hollywood Blvd - Los Angeles CA
+            <!-- Section: First Look -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>نظرتنا الأولى</span>
+                    <i class="fa-solid fa-eye" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/5.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/6.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/7.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/8.jpg"
+                                alt="صورة">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Our Life Together -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>عمرنا سويا</span>
+                    <i class="fa-solid fa-infinity" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/9.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/10.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/11.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/1.jpg"
+                                alt="صورة">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Endless Photos (2x2 Grid) -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>صور لا تنتهي</span>
+                    <i class="fa-solid fa-images" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/2.jpg"
+                                alt="صورة 1">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/3.jpg"
+                                alt="صورة 2">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/4.jpg"
+                                alt="صورة 3">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/5.jpg"
+                                alt="صورة 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Memories with Details -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>شواهد الحكاية</span>
+                    <i class="fa-solid fa-folder-open" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="memory-list">
+
+                        <!-- Memory 1 -->
+                        <div class="memory-card" onclick="openMemoryModal(1)">
+                            <img src="img/6.jpg"
+                                alt="ذكرى 1">
+                            <p class="memory-hint">اليوم الذي بدأ فيه كل شيء...</p>
+                        </div>
+
+                        <!-- Memory 2 -->
+                        <div class="memory-card" onclick="openMemoryModal(2)">
+                            <img src="img/7.jpg"
+                                alt="ذكرى 2">
+                            <p class="memory-hint">ضحكاتنا وسط الزحام</p>
+                        </div>
+
+                        <!-- Memory 3 -->
+                        <div class="memory-card" onclick="openMemoryModal(3)">
+                            <img src="img/8.jpg"
+                                alt="ذكرى 3">
+                            <p class="memory-hint">رحلتنا التي لا تُنسى</p>
+                        </div>
+
+                        <!-- Memory 4 -->
+                        <div class="memory-card" onclick="openMemoryModal(4)">
+                            <img src="img/9.jpg"
+                                alt="ذكرى 4">
+                            <p class="memory-hint">نظرة تحمل ألف كلمة</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Secret Word -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>أرشيف القلب</span>
+                    <i class="fa-solid fa-key" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content secret-section">
+                    <h3 class="romantic-title">كلمة من القلب</h3>
+                    <p class="romantic-paragraph">
+                        كل لحظة معك هي حكاية بحد ذاتها، وكل صورة هي شاهد على حب يكبر يوماً بعد يوم.
+                        هناك سر صغير احتفظت به خصيصاً لك...
+                    </p>
+                    <button class="btn-royal" onclick="openPasswordModal()">
+                        <i class="fa-solid fa-unlock-keyhole"></i> اكتشف السر
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- 1. Memory Details Modal -->
+    <div id="memory-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMemoryModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Memory Detail">
+                <h3 id="modal-title" class="elegant-title"></h3>
+                <p id="modal-text" class="elegant-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Password Modal -->
+    <div id="password-modal" class="modal-overlay">
+        <div class="modal-content small-modal">
+            <span class="close-btn" onclick="closePasswordModal()">&times;</span>
+            <h3 class="elegant-title">مفتاح القلب</h3>
+            <p class="elegant-text">أدخل كلمة السر لتكتشف المفاجأة (جرب: احبك)</p>
+            <div class="password-input-group">
+                <input type="password" id="secret-password" placeholder="كلمة السر...">
+                <button class="btn-royal btn-small" onclick="checkPassword()">تأكيد</button>
+            </div>
+            <p id="password-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- 3. Final Surprise Modal -->
+    <div id="final-modal" class="modal-overlay">
+        <div class="modal-content final-surprise">
+            <span class="close-btn" onclick="closeFinalModal()">&times;</span>
+            <h2 class="elegant-title gold-text">مفاجأة!</h2>
+            <img src="img/10.jpg"
+                alt="Final Surprise"
+                style="border-radius: 12px; margin: 20px 0; width: 100%; max-height: 250px; object-fit: cover;">
+            <p class="elegant-text">
+                أنت أجمل ما حدث لي. أحبك أكثر مما تتخيل.
+                <br>هذا المشروع البسيط هو تعبير صغير عن حبي الكبير لك.
             </p>
-          </div>
-
-          <div class="text-center mb-4 col-lg-4 col-md-6">
-            <i class="fa-solid fa-envelope rounded-pill t-duration fs-4"></i>
-            <h4 class="fs-6 montserrat fw-bold mt-2">Email</h4>
-            <p class="text-secondary poppins">Support@website.com</p>
-          </div>
-
-          <div class="text-center mb-4 col-lg-4 col-md-6">
-            <i class="fa-solid fa-phone rounded-pill t-duration fs-4"></i>
-            <h4 class="fs-6 montserrat fw-bold mt-2">Phone</h4>
-            <p class="text-secondary poppins">+20 010 2517 8918</p>
-            <!-- <p class="text-secondary poppins">+201010574543</p> -->
-          </div>
+            <i class="fa-solid fa-heart fa-beat heart-icon"></i>
         </div>
+    </div>
 
-        <form method="post" class="mt-5">
-          <div class="row gap-2">
-            <div class="col-lg mt-2">
-              <input
-                type="text"
-                name="name"
-                class="w-100 bg-body-secondary border-0 rounded-1 p-2"
-                placeholder="Name"
-              />
-            </div>
-            <div class="col-lg mt-2">
-              <input
-                type="email"
-                name="email"
-                class="w-100 bg-body-secondary border-0 rounded-1 p-2"
-                placeholder="Email"
-              />
-            </div>
-            <div class="col-12 mt-2">
-              <textarea
-                name="msg"
-                id="msg"
-                rows="7"
-                class="w-100 bg-body-secondary border-0 rounded-1 p-2"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <div class="col-2">
-              <button
-                class="btn border border-1 border-black t-duration poppins"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
+    <script src="script.js"></script>
+</body>
 
-    <!-- ============== FOOTER ============== -->
-    <footer class="overflow-auto bg-black">
-      <div class="container my-4 text-center text-white">
-        <p class="small text-secondary p-1 poppins">
-          Copy Right 2018 © By Daniels All Rights Reserved
-        </p>
-      </div>
-    </footer>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="/js/script.js"></script>
-    <!-- ============== END ============== -->
-  </body>
 </html>
