@@ -144,7 +144,10 @@ ul {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
+
+
 
 .logo a {
   font-family: var(--font-head);
@@ -160,6 +163,14 @@ ul {
 .nav-links {
   display: flex;
   gap: 2rem;
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .nav-links a {
@@ -477,7 +488,7 @@ ul {
 /* Projects Section */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 2rem;
 }
 
