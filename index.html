@@ -1,294 +1,545 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ديوان الأيام - مفاجأة</title>
-    <!-- Google Fonts for Premium Arabic Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap"
-        rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mustafa Salah is a Full-Stack Software Engineer specializing in Next.js, NestJS, and scalable web applications. Explore my portfolio to see my latest projects.">
+  <title>Mustafa Salah | Full-Stack Engineer</title>
+
+  <!-- Google Fonts: Space Mono & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- 1. The Welcome Door (Overlay) -->
-    <div id="door-overlay" class="door-overlay">
-        <div class="door door-left" id="door-left">
-            <div class="door-panel"></div>
-        </div>
-        <div class="door door-right" id="door-right">
-            <div class="door-panel"></div>
-        </div>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
 
-        <div class="welcome-center" id="welcome-center">
-            <div class="door-frame-wrapper">
-                <img src="img/door.jpg" class="door-frame-img" alt="Door Front">
-                <div class="door-frame-content">
-                    <p class="welcome-quote"
-                        style="font-family: 'Aref Ruqaa', serif; font-size: 1.5rem; color: #ff3b3b; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.4); margin-bottom: 20px; line-height: 1.6; text-align: center;">
-                        "بك ابتديت عمري يا اجمل من عمري<br>دمت لي شي جميل لا ينتهي"</p>
-                    <!-- "بِكَ ابْتَدَيْتُ عُمْرِي يَا أَجْمَلَ مِنْ عُمْرِي<br>دُمْتَ لِي شَيْئاً جَمِيلاً لَا يَنْتَهِي"</p> -->
-                    <div class="welcome-card"
-                        style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
-                        <h1 class="welcome-title" style="color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                            Mohammed & Menna</h1>
-                        <h2 class="welcome-subtitle" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">ديوان الأيام</h2>
-                        <div class="welcome-divider"></div>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#hero">MS<span class="dot">.</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="status-badge">
+        <span class="pulse-dot"></span> Available for work
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
-                        <button id="btn-open-door" class="btn-royal">
-                            <i class="fa-solid fa-lock" style="margin-left: 8px;"></i> فتح الذكريات
-                        </button>
-                        <p class="welcome-hint"
-                            style="color: #ffffff; font-weight: bold; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">اضغط لفتح
-                            الدولاب والدخول إلى الذكريات</p>
-                        <p class="romantic-text"
-                            style="display: none; margin-top: 15px; font-size: 0.9rem; color: #ffffff;">هنا
-                            نحفظ الذكريات... لتبقى للأبد</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Hero Section -->
+  <header id="hero">
+    <!-- Three.js Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <div class="hero-content">
+      <span class="hero-tag fade-in">Full-Stack Engineer</span>
+      <h1 class="hero-title fade-in">Mustafa <span class="accent-text">Salah</span></h1>
+      <p class="hero-subline fade-in">Building scalable systems with Next.js &middot; NestJS &middot; GraphQL</p>
+
+      <div class="hero-cta fade-in">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+        <a href="Mustafa_Salah_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download CV</a>
+      </div>
     </div>
 
-    <!-- 2. Main Gallery Content -->
-    <div id="main-content" class="main-content">
-
-        <header class="app-header">
-            <p class="romantic-tagline">هنا نحفظ الذكريات... لتبقى للأبد</p>
-        </header>
-
-        <main class="folders-container">
-
-            <!-- Section 1: What they love -->
-            <section class="folder-section">
-                <div class="folder-tab">
-                    <span>البداية</span>
-                    <i class="fa-solid fa-heart" style="margin-right: 5px; color: #c49a62;"></i>
-                </div>
-                <div class="folder-content">
-                    <div class="photo-grid-2x2">
-                        <div class="grid-item">
-                            <img src="img/1.jpg"
-                                alt="صورة 1">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/2.jpg"
-                                alt="صورة 2">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/3.jpg"
-                                alt="صورة 3">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/4.jpg"
-                                alt="صورة 4">
-                        </div>
-                    </div>
-                    <div class="caption" style="margin-top: 15px;">
-                        <h3>الأشياء البسيطة التي تجمعنا</h3>
-                        <p>في كل تفصيلة صغيرة، أرى انعكاساً لجمال روحك.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: First Look -->
-            <section class="folder-section">
-                <div class="folder-tab">
-                    <span>نظرتنا الأولى</span>
-                    <i class="fa-solid fa-eye" style="margin-right: 5px; color: #c49a62;"></i>
-                </div>
-                <div class="folder-content">
-                    <div class="photo-grid-2x2">
-                        <div class="grid-item">
-                            <img src="img/5.jpg"
-                                alt="صورة">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/6.jpg"
-                                alt="صورة">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/7.jpg"
-                                alt="صورة">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/8.jpg"
-                                alt="صورة">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Our Life Together -->
-            <section class="folder-section">
-                <div class="folder-tab">
-                    <span>عمرنا سويا</span>
-                    <i class="fa-solid fa-infinity" style="margin-right: 5px; color: #c49a62;"></i>
-                </div>
-                <div class="folder-content">
-                    <div class="photo-grid-2x2">
-                        <div class="grid-item">
-                            <img src="img/9.jpg"
-                                alt="صورة">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/10.jpg"
-                                alt="صورة">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/11.jpg"
-                                alt="صورة">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/1.jpg"
-                                alt="صورة">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 2: Endless Photos (2x2 Grid) -->
-            <section class="folder-section">
-                <div class="folder-tab">
-                    <span>صور لا تنتهي</span>
-                    <i class="fa-solid fa-images" style="margin-right: 5px; color: #c49a62;"></i>
-                </div>
-                <div class="folder-content">
-                    <div class="photo-grid-2x2">
-                        <div class="grid-item">
-                            <img src="img/2.jpg"
-                                alt="صورة 1">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/3.jpg"
-                                alt="صورة 2">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/4.jpg"
-                                alt="صورة 3">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/5.jpg"
-                                alt="صورة 4">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 3: Memories with Details -->
-            <section class="folder-section">
-                <div class="folder-tab">
-                    <span>شواهد الحكاية</span>
-                    <i class="fa-solid fa-folder-open" style="margin-right: 5px; color: #c49a62;"></i>
-                </div>
-                <div class="folder-content">
-                    <div class="memory-list">
-
-                        <!-- Memory 1 -->
-                        <div class="memory-card" onclick="openMemoryModal(1)">
-                            <img src="img/6.jpg"
-                                alt="ذكرى 1">
-                            <p class="memory-hint">اليوم الذي بدأ فيه كل شيء...</p>
-                        </div>
-
-                        <!-- Memory 2 -->
-                        <div class="memory-card" onclick="openMemoryModal(2)">
-                            <img src="img/7.jpg"
-                                alt="ذكرى 2">
-                            <p class="memory-hint">ضحكاتنا وسط الزحام</p>
-                        </div>
-
-                        <!-- Memory 3 -->
-                        <div class="memory-card" onclick="openMemoryModal(3)">
-                            <img src="img/8.jpg"
-                                alt="ذكرى 3">
-                            <p class="memory-hint">رحلتنا التي لا تُنسى</p>
-                        </div>
-
-                        <!-- Memory 4 -->
-                        <div class="memory-card" onclick="openMemoryModal(4)">
-                            <img src="img/9.jpg"
-                                alt="ذكرى 4">
-                            <p class="memory-hint">نظرة تحمل ألف كلمة</p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 4: Secret Word -->
-            <section class="folder-section">
-                <div class="folder-tab">
-                    <span>أرشيف القلب</span>
-                    <i class="fa-solid fa-key" style="margin-right: 5px; color: #c49a62;"></i>
-                </div>
-                <div class="folder-content secret-section">
-                    <h3 class="romantic-title">كلمة من القلب</h3>
-                    <p class="romantic-paragraph">
-                        كل لحظة معك هي حكاية بحد ذاتها، وكل صورة هي شاهد على حب يكبر يوماً بعد يوم.
-                        هناك سر صغير احتفظت به خصيصاً لك...
-                    </p>
-                    <button class="btn-royal" onclick="openPasswordModal()">
-                        <i class="fa-solid fa-unlock-keyhole"></i> اكتشف السر
-                    </button>
-                </div>
-            </section>
-
-        </main>
+    <!-- Floating Code Block -->
+    <div class="floating-code fade-in">
+      <pre><code><span class="keyword">const</span> engineer = {
+  <span class="property">name</span>: <span class="string">"Mustafa Salah"</span>,
+  <span class="property">stack</span>: [<span class="string">"Next.js"</span>, <span class="string">"NestJS"</span>, <span class="string">"GraphQL"</span>],
+  <span class="property">status</span>: <span class="string">"open to work"</span> <span class="accent-text">✓</span>
+};</code></pre>
     </div>
 
-    <!-- Modals -->
-
-    <!-- 1. Memory Details Modal -->
-    <div id="memory-modal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeMemoryModal()">&times;</span>
-            <div class="modal-body">
-                <img id="modal-image" src="" alt="Memory Detail">
-                <h3 id="modal-title" class="elegant-title"></h3>
-                <p id="modal-text" class="elegant-text"></p>
-            </div>
-        </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
     </div>
+  </header>
 
-    <!-- 2. Password Modal -->
-    <div id="password-modal" class="modal-overlay">
-        <div class="modal-content small-modal">
-            <span class="close-btn" onclick="closePasswordModal()">&times;</span>
-            <h3 class="elegant-title">مفتاح القلب</h3>
-            <p class="elegant-text">أدخل كلمة السر لتكتشف المفاجأة (جرب: احبك)</p>
-            <div class="password-input-group">
-                <input type="password" id="secret-password" placeholder="كلمة السر...">
-                <button class="btn-royal btn-small" onclick="checkPassword()">تأكيد</button>
-            </div>
-            <p id="password-error" class="error-msg"></p>
-        </div>
-    </div>
-
-    <!-- 3. Final Surprise Modal -->
-    <div id="final-modal" class="modal-overlay">
-        <div class="modal-content final-surprise">
-            <span class="close-btn" onclick="closeFinalModal()">&times;</span>
-            <h2 class="elegant-title gold-text">مفاجأة!</h2>
-            <img src="img/10.jpg"
-                alt="Final Surprise"
-                style="border-radius: 12px; margin: 20px 0; width: 100%; max-height: 250px; object-fit: cover;">
-            <p class="elegant-text">
-                أنت أجمل ما حدث لي. أحبك أكثر مما تتخيل.
-                <br>هذا المشروع البسيط هو تعبير صغير عن حبي الكبير لك.
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-label fade-in">01 / About</div>
+        <div class="about-grid">
+          <div class="about-left fade-in">
+            <h2 class="section-title">Who I Am</h2>
+            <p>
+              I'm a Full-Stack Software Engineer who loves turning complex problems into elegant, user-friendly solutions. I started my journey organizing tech events and diving deep into computer science, which sparked my passion for scalable backend architectures and modern web technologies. When I'm not writing code, I'm exploring the latest tools in the React and Node ecosystems.
             </p>
-            <i class="fa-solid fa-heart fa-beat heart-icon"></i>
+            <div class="social-tags">
+              <a href="https://github.com/MustafaSalahX" target="_blank" rel="noopener" class="tag-link">GitHub ↗</a>
+              <a href="https://linkedin.com/in/mustafasalahxx/" target="_blank" rel="noopener" class="tag-link">LinkedIn
+                ↗</a>
+            </div>
+          </div>
+          <div class="about-right fade-in">
+            <div class="stats-grid">
+              <div class="stat-box">
+                <h3>4+</h3>
+                <p>Projects Delivered</p>
+              </div>
+              <div class="stat-box">
+                <h3>3+</h3>
+                <p>Years in Tech</p>
+              </div>
+              <div class="stat-box">
+                <h3>A+</h3>
+                <p>Graduation Grade</p>
+              </div>
+              <div class="stat-box">
+                <h3>10+</h3>
+                <p>Events Organized</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+      <div class="container">
+        <div class="section-label fade-in">02 / Skills</div>
+        <h2 class="section-title fade-in">Technical Arsenal</h2>
+
+        <div class="skills-container fade-in">
+          <div class="skill-category">
+            <h3 class="category-title">Frontend</h3>
+            <div class="skill-chips">
+              <span class="chip">Next.js</span>
+              <span class="chip">React.js</span>
+              <span class="chip">Vue.js</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Backend</h3>
+            <div class="skill-chips">
+              <span class="chip">Node.js</span>
+              <span class="chip">NestJS</span>
+              <span class="chip">Laravel</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">GraphQL</span>
+              <span class="chip">API Integration</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Databases</h3>
+            <div class="skill-chips">
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">SQL Server</span>
+              <span class="chip">NoSQL</span>
+              <span class="chip">TypeORM</span>
+              <span class="chip">Prisma</span>
+              <span class="chip">Redis</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">DevOps & Tools</h3>
+            <div class="skill-chips">
+              <span class="chip">Docker</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Security & Auth</h3>
+            <div class="skill-chips">
+              <span class="chip">JWT</span>
+              <span class="chip">OAuth</span>
+              <span class="chip">RBAC</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Architecture & Process</h3>
+            <div class="skill-chips">
+              <span class="chip">Scalable Architecture</span>
+              <span class="chip">Microservices</span>
+              <span class="chip">MVC Pattern</span>
+              <span class="chip">Agile</span>
+              <span class="chip">Scrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-label fade-in">03 / Projects</div>
+        <h2 class="section-title fade-in">Selected Work</h2>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <div class="project-card fade-in">
+            <a href="https://modernregistrationportal.vercel.app/login" target="_blank" rel="noopener"
+              class="project-overlay-link" aria-label="View Project"></a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Academic Management System</h3>
+                <span class="project-badge">Graduation Project — A+</span>
+              </div>
+              <p class="project-desc">Complete academic platform covering student registration, course management,
+                grading, and semester scheduling. Integrated MobiCash payment gateway.</p>
+              <div class="project-tech">
+                <span>Next.js</span><span>NestJS</span><span>GraphQL</span><span>PostgreSQL</span><span>Docker</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://modernregistrationportal.vercel.app/login" target="_blank" rel="noopener"
+                class="project-link" aria-label="Live Preview" title="Live Demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/MustafaSalahX/Academic-Management-System" target="_blank" rel="noopener" class="project-link"
+                aria-label="View on GitHub" title="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card fade-in">
+            <a href="https://wedding-book-three.vercel.app/?code=ElHadad" target="_blank" rel="noopener"
+              class="project-overlay-link" aria-label="View Project"></a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Scalable Wedding Booking System</h3>
+              </div>
+              <p class="project-desc">Full booking platform with role-based access control for Admin and Super Admin
+                roles. Built dedicated dashboards for operational management.</p>
+              <div class="project-tech">
+                <span>Next.js</span><span>NestJS</span><span>PostgreSQL</span><span>Docker</span><span>JWT</span><span>RBAC</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://wedding-book-three.vercel.app/" target="_blank" rel="noopener" class="project-link"
+                aria-label="Live Preview" title="Live Demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/MustafaSalahX/Wedding-Booking-System" target="_blank" rel="noopener" class="project-link"
+                aria-label="View on GitHub" title="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card fade-in">
+            <a href="https://wedding-book-three.vercel.app/" target="_blank" rel="noopener" class="project-overlay-link"
+              aria-label="View Project"></a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Dynamic Wedding Invitation System</h3>
+              </div>
+              <p class="project-desc">Personalized invitation platform with unique access links per guest and QR code
+                functionality. Responsive UI supporting multiple simultaneous invitation instances.</p>
+              <div class="project-tech">
+                <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>QR Code</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://wedding-book-three.vercel.app/" target="_blank" rel="noopener" class="project-link"
+                aria-label="Live Preview" title="Live Demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/MustafaSalahX/Wedding-Invitation-System" target="_blank" rel="noopener" class="project-link"
+                aria-label="View on GitHub" title="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card fade-in">
+            <a href="https://jumanalaw.online/" target="_blank" rel="noopener" class="project-overlay-link"
+              aria-label="View Project"></a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Jumana Law — Legal Website</h3>
+              </div>
+              <p class="project-desc">Professional full-stack legal website for a live client. Improved UI/UX, page
+                performance, cross-device accessibility, and SEO.</p>
+              <div class="project-tech">
+                <span>Vue.js</span><span>Node.js</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://jumanalaw.online/" target="_blank" rel="noopener" class="project-link"
+                aria-label="Live Preview" title="Live Demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/MustafaSalahX/Jumana-Law" target="_blank" rel="noopener" class="project-link"
+                aria-label="View on GitHub" title="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card fade-in">
+            <a href="https://github.com/MustafaSalahX" target="_blank" rel="noopener" class="project-overlay-link"
+              aria-label="View Project"></a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Laravel Blog System</h3>
+              </div>
+              <p class="project-desc">Multi-role blog platform (Admin, Writer, Visitor) with full CRUD content
+                management, secure authentication, and MVC architecture.</p>
+              <div class="project-tech">
+                <span>Laravel</span><span>PHP</span><span>MySQL</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MustafaSalahX/Laravel-Blog-System" target="_blank" rel="noopener" class="project-link"
+                aria-label="View on GitHub" title="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card fade-in">
+            <a href="https://mustafasalahx.github.io/G1/" target="_blank" rel="noopener" class="project-overlay-link"
+              aria-label="View Project"></a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Diwan Al-Ayam — A Gallery of Memories</h3>
+              </div>
+              <p class="project-desc">A beautifully designed digital gallery showcasing a collection of cherished moments and experiences with an interactive UI.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://mustafasalahx.github.io/G1/" target="_blank" rel="noopener" class="project-link"
+                aria-label="Live Preview" title="Live Demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/MustafaSalahX/mustafasalahx.github.io/tree/main/G1" target="_blank" rel="noopener" class="project-link"
+                aria-label="View on GitHub" title="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-alt">
+      <div class="container">
+        <div class="section-label fade-in">04 / Experience</div>
+        <h2 class="section-title fade-in">Work & Involvement</h2>
+
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">01/2024 – Present</div>
+            <div class="timeline-content">
+              <h3>Freelance Full-Stack Developer</h3>
+              <div class="timeline-company">Self-Employed</div>
+              <ul class="timeline-bullets">
+                <li>Designed and deployed production-ready web applications using Next.js and NestJS.</li>
+                <li>Implemented secure role-based access control and scalable PostgreSQL databases.</li>
+                <li>Collaborated with clients to translate business requirements into technical solutions.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">03/2022 – 08/2024</div>
+            <div class="timeline-content">
+              <h3>Head Organizer – Tech Events</h3>
+              <div class="timeline-company">GDSC / GDG On Campus / InactUs Egypt</div>
+              <ul class="timeline-bullets">
+                <li>Led planning of 10+ large-scale tech events, reaching over 2,000 students.</li>
+                <li>Managed cross-functional teams to deliver technical workshops and hackathons.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">06/2023</div>
+            <div class="timeline-content">
+              <h3>Event Organizer</h3>
+              <div class="timeline-company">Droidcon Egypt</div>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">07/2022 – 09/2022</div>
+            <div class="timeline-content">
+              <h3>CS50x Egypt – Organizer & Participant</h3>
+              <div class="timeline-company">Modern Academy – Harvard CS50 Chapter</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-label fade-in">05 / Contact</div>
+        <h2 class="section-title fade-in">Let's Build Something</h2>
+        <p class="contact-subtext fade-in">Open to freelance projects, full-time roles, and collaborations.</p>
+
+        <div class="contact-cards fade-in">
+          <a href="mailto:mostafamahmoud9500@gmail.com" class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>mostafamahmoud9500@gmail.com</p>
+            </div>
+          </a>
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Cairo, Egypt</p>
+            </div>
+          </div>
+          <a href="tel:+201010574543" class="contact-card">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+20 1010574543</p>
+            </div>
+          </a>
+          <a href="https://wa.me/201010574543" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">💬</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+20 1010574543</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-cta fade-in">
+          <a href="mailto:mostafamahmoud9500@gmail.com" class="btn btn-primary">Send Email</a>
+          <a href="https://github.com/MustafaSalahX" target="_blank" rel="noopener" class="btn btn-ghost">View
+            GitHub</a>
+          <a href="Mustafa_Salah_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 &mdash; Built with <a href="https://github.com/MustafaSalahX" target="_blank">Mustafa Salah</a></p>
+      <div class="footer-socials">
+        <a href="https://github.com/MustafaSalahX" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/mustafasalahxx/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

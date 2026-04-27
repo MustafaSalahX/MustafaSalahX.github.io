@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ديوان الأيام - مفاجأة</title>
+    <!-- Google Fonts for Premium Arabic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. The Welcome Door (Overlay) -->
+    <div id="door-overlay" class="door-overlay">
+        <div class="door door-left" id="door-left">
+            <div class="door-panel"></div>
+        </div>
+        <div class="door door-right" id="door-right">
+            <div class="door-panel"></div>
+        </div>
+
+        <div class="welcome-center" id="welcome-center">
+            <div class="door-frame-wrapper">
+                <img src="img/door.jpg" class="door-frame-img" alt="Door Front">
+                <div class="door-frame-content">
+                    <p class="welcome-quote"
+                        style="font-family: 'Aref Ruqaa', serif; font-size: 1.5rem; color: #ff3b3b; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.4); margin-bottom: 20px; line-height: 1.6; text-align: center;">
+                        "بك ابتديت عمري يا اجمل من عمري<br>دمت لي شي جميل لا ينتهي"</p>
+                    <!-- "بِكَ ابْتَدَيْتُ عُمْرِي يَا أَجْمَلَ مِنْ عُمْرِي<br>دُمْتَ لِي شَيْئاً جَمِيلاً لَا يَنْتَهِي"</p> -->
+                    <div class="welcome-card"
+                        style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                        <h1 class="welcome-title" style="color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            Mohammed & Menna</h1>
+                        <h2 class="welcome-subtitle" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">ديوان الأيام</h2>
+                        <div class="welcome-divider"></div>
+
+                        <button id="btn-open-door" class="btn-royal">
+                            <i class="fa-solid fa-lock" style="margin-left: 8px;"></i> فتح الذكريات
+                        </button>
+                        <p class="welcome-hint"
+                            style="color: #ffffff; font-weight: bold; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">اضغط لفتح
+                            الدولاب والدخول إلى الذكريات</p>
+                        <p class="romantic-text"
+                            style="display: none; margin-top: 15px; font-size: 0.9rem; color: #ffffff;">هنا
+                            نحفظ الذكريات... لتبقى للأبد</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Gallery Content -->
+    <div id="main-content" class="main-content">
+
+        <header class="app-header">
+            <p class="romantic-tagline">هنا نحفظ الذكريات... لتبقى للأبد</p>
+        </header>
+
+        <main class="folders-container">
+
+            <!-- Section 1: What they love -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>البداية</span>
+                    <i class="fa-solid fa-heart" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/1.jpg"
+                                alt="صورة 1">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/2.jpg"
+                                alt="صورة 2">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/3.jpg"
+                                alt="صورة 3">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/4.jpg"
+                                alt="صورة 4">
+                        </div>
+                    </div>
+                    <div class="caption" style="margin-top: 15px;">
+                        <h3>الأشياء البسيطة التي تجمعنا</h3>
+                        <p>في كل تفصيلة صغيرة، أرى انعكاساً لجمال روحك.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: First Look -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>نظرتنا الأولى</span>
+                    <i class="fa-solid fa-eye" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/5.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/6.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/7.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/8.jpg"
+                                alt="صورة">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Our Life Together -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>عمرنا سويا</span>
+                    <i class="fa-solid fa-infinity" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/9.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/10.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/11.jpg"
+                                alt="صورة">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/1.jpg"
+                                alt="صورة">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Endless Photos (2x2 Grid) -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>صور لا تنتهي</span>
+                    <i class="fa-solid fa-images" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="photo-grid-2x2">
+                        <div class="grid-item">
+                            <img src="img/2.jpg"
+                                alt="صورة 1">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/3.jpg"
+                                alt="صورة 2">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/4.jpg"
+                                alt="صورة 3">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/5.jpg"
+                                alt="صورة 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Memories with Details -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>شواهد الحكاية</span>
+                    <i class="fa-solid fa-folder-open" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content">
+                    <div class="memory-list">
+
+                        <!-- Memory 1 -->
+                        <div class="memory-card" onclick="openMemoryModal(1)">
+                            <img src="img/6.jpg"
+                                alt="ذكرى 1">
+                            <p class="memory-hint">اليوم الذي بدأ فيه كل شيء...</p>
+                        </div>
+
+                        <!-- Memory 2 -->
+                        <div class="memory-card" onclick="openMemoryModal(2)">
+                            <img src="img/7.jpg"
+                                alt="ذكرى 2">
+                            <p class="memory-hint">ضحكاتنا وسط الزحام</p>
+                        </div>
+
+                        <!-- Memory 3 -->
+                        <div class="memory-card" onclick="openMemoryModal(3)">
+                            <img src="img/8.jpg"
+                                alt="ذكرى 3">
+                            <p class="memory-hint">رحلتنا التي لا تُنسى</p>
+                        </div>
+
+                        <!-- Memory 4 -->
+                        <div class="memory-card" onclick="openMemoryModal(4)">
+                            <img src="img/9.jpg"
+                                alt="ذكرى 4">
+                            <p class="memory-hint">نظرة تحمل ألف كلمة</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Secret Word -->
+            <section class="folder-section">
+                <div class="folder-tab">
+                    <span>أرشيف القلب</span>
+                    <i class="fa-solid fa-key" style="margin-right: 5px; color: #c49a62;"></i>
+                </div>
+                <div class="folder-content secret-section">
+                    <h3 class="romantic-title">كلمة من القلب</h3>
+                    <p class="romantic-paragraph">
+                        كل لحظة معك هي حكاية بحد ذاتها، وكل صورة هي شاهد على حب يكبر يوماً بعد يوم.
+                        هناك سر صغير احتفظت به خصيصاً لك...
+                    </p>
+                    <button class="btn-royal" onclick="openPasswordModal()">
+                        <i class="fa-solid fa-unlock-keyhole"></i> اكتشف السر
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- 1. Memory Details Modal -->
+    <div id="memory-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMemoryModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Memory Detail">
+                <h3 id="modal-title" class="elegant-title"></h3>
+                <p id="modal-text" class="elegant-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Password Modal -->
+    <div id="password-modal" class="modal-overlay">
+        <div class="modal-content small-modal">
+            <span class="close-btn" onclick="closePasswordModal()">&times;</span>
+            <h3 class="elegant-title">مفتاح القلب</h3>
+            <p class="elegant-text">أدخل كلمة السر لتكتشف المفاجأة (جرب: احبك)</p>
+            <div class="password-input-group">
+                <input type="password" id="secret-password" placeholder="كلمة السر...">
+                <button class="btn-royal btn-small" onclick="checkPassword()">تأكيد</button>
+            </div>
+            <p id="password-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- 3. Final Surprise Modal -->
+    <div id="final-modal" class="modal-overlay">
+        <div class="modal-content final-surprise">
+            <span class="close-btn" onclick="closeFinalModal()">&times;</span>
+            <h2 class="elegant-title gold-text">مفاجأة!</h2>
+            <img src="img/10.jpg"
+                alt="Final Surprise"
+                style="border-radius: 12px; margin: 20px 0; width: 100%; max-height: 250px; object-fit: cover;">
+            <p class="elegant-text">
+                أنت أجمل ما حدث لي. أحبك أكثر مما تتخيل.
+                <br>هذا المشروع البسيط هو تعبير صغير عن حبي الكبير لك.
+            </p>
+            <i class="fa-solid fa-heart fa-beat heart-icon"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
