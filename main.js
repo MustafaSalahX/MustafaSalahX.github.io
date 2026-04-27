@@ -6,12 +6,25 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollAnimations();
   initThreeJsBackground();
+  initGyroscope();
 });
+
+// --- Shared Motion State ---
+const motionState = {
+  x: 0,
+  y: 0,
+  targetX: 0,
+  targetY: 0,
+  isGyroActive: false
+};
 
 // --- Custom Cursor ---
 function initCustomCursor() {
   const cursor = document.querySelector('.cursor');
   if (!cursor) return;
+
+  // Hide default cursor globally
+  document.documentElement.style.cursor = 'none';
 
   // Track mouse movement
   document.addEventListener('mousemove', (e) => {
@@ -35,9 +48,13 @@ function initCustomCursor() {
     cursor.style.opacity = '1';
   });
 
-  // Hide custom cursor on touch devices for performance and UX
-  if (window.matchMedia("(pointer: coarse)").matches) {
+  // Hide custom cursor on touch-only devices for performance and UX
+  // But ensure it stays on if a mouse is being used (fine-tuned pointer)
+  if (window.matchMedia("(pointer: coarse)").matches && !window.matchMedia("(pointer: fine)").matches) {
     cursor.style.display = 'none';
+    document.documentElement.style.cursor = 'auto'; // Restore default cursor
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach(el => el.style.cursor = 'auto');
   }
 }
 
@@ -159,18 +176,18 @@ function initThreeJsBackground() {
   pointLight.position.set(0, 0, 10);
   scene.add(pointLight);
 
-  // Mouse Interaction
-  let mouseX = 0;
-  let mouseY = 0;
-  let targetX = 0;
-  let targetY = 0;
+  // Interaction State
 
   const windowHalfX = window.innerWidth / 2;
   const windowHalfY = window.innerHeight / 2;
+  const heroContent = document.querySelector('.hero-content');
+  const floatingCode = document.querySelector('.floating-code');
 
   document.addEventListener('mousemove', (event) => {
-    mouseX = (event.clientX - windowHalfX) * 0.001;
-    mouseY = (event.clientY - windowHalfY) * 0.001;
+    if (!motionState.isGyroActive) {
+      motionState.x = (event.clientX - windowHalfX) * 0.001;
+      motionState.y = (event.clientY - windowHalfY) * 0.001;
+    }
   });
 
   // Handle Resize
@@ -197,16 +214,77 @@ function initThreeJsBackground() {
     // Rotate particle field slowly
     particleMesh.rotation.y = elapsedTime * 0.05;
 
-    // Smoothly ease mouse target
-    targetX = mouseX * 0.5;
-    targetY = mouseY * 0.5;
+    // Smoothly ease mouse/gyro target
+    motionState.targetX += (motionState.x - motionState.targetX) * 0.05;
+    motionState.targetY += (motionState.y - motionState.targetY) * 0.05;
 
-    // React to mouse: slight tilt of the whole scene
-    scene.rotation.x += 0.05 * (targetY - scene.rotation.x);
-    scene.rotation.y += 0.05 * (targetX - scene.rotation.y);
+    // React to motion: slight tilt of the whole scene
+    scene.rotation.x = motionState.targetY * 0.5;
+    scene.rotation.y = motionState.targetX * 0.5;
+
+    // Apply CSS Parallax to Hero Content
+    if (heroContent) {
+      const tx = motionState.targetX * 50; // Max 50px shift
+      const ty = motionState.targetY * 50;
+      heroContent.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
+    }
+    
+    if (floatingCode && window.innerWidth > 1024) {
+      const tx = motionState.targetX * -30; // Inverse direction for depth
+      const ty = motionState.targetY * -30;
+      floatingCode.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
+    }
 
     renderer.render(scene, camera);
   }
 
   animate();
+}
+
+// --- Gyroscope & OS Detection ---
+function initGyroscope() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const motionToggle = document.getElementById('motion-toggle');
+  
+  if (!window.DeviceOrientationEvent) return;
+
+  if (isIOS) {
+    // Check if permission is needed (iOS 13+)
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+      motionToggle.classList.add('visible');
+      
+      motionToggle.addEventListener('click', () => {
+        DeviceOrientationEvent.requestPermission()
+          .then(permissionState => {
+            if (permissionState === 'granted') {
+              startGyro();
+              motionToggle.classList.remove('visible');
+            }
+          })
+          .catch(console.error);
+      });
+    } else {
+      // Older iOS or permission already granted
+      startGyro();
+    }
+  } else {
+    // Android or other devices: start immediately if orientation is supported
+    startGyro();
+  }
+
+  function startGyro() {
+    window.addEventListener('deviceorientation', (e) => {
+      // Only "activate" gyro if we actually receive meaningful data
+      if (e.beta !== null && e.gamma !== null) {
+        motionState.isGyroActive = true;
+        
+        // Normalize values
+        const x = e.gamma || 0; 
+        const y = e.beta || 0;  
+        
+        motionState.x = Math.max(-1, Math.min(1, x / 20)) * 0.5;
+        motionState.y = Math.max(-1, Math.min(1, (y - 45) / 20)) * 0.5;
+      }
+    });
+  }
 }
